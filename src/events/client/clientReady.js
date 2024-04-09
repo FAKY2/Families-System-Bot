@@ -37,11 +37,11 @@ module.exports = async (client) => {
                     statuttext = process.env.DISCORD_STATUS.split(', ');
                 } else {
                     statuttext = [
-                        `・Families`,
-                        `・👀`,
-                        `・Families `,
-                        `・Families`,
-                        `・👀`
+                        `Families`,
+                        `👀`,
+                        `Families `,
+                        `Families`,
+                        `👀`
                     ];
                 }
                 const randomText = statuttext[Math.floor(Math.random() * statuttext.length)];
