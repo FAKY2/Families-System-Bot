@@ -65,7 +65,7 @@ module.exports = {
                 },
                 {
                     name: `🔗┆Links`,
-                    value: `[Website](https://corwindev.nl/) | [Invite](${client.config.discord.botInvite}) | [Vote](https://top.gg/bot/798144456528363550/vote)`
+                    value: ` [Invite Faky's Music](${https://discord.com/oauth2/authorize?client_id=1213700667374571620&permissions=2150743120&scope=bot})`
                 },
             ],
             components: [row],
