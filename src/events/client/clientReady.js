@@ -38,10 +38,10 @@ module.exports = async (client) => {
                 } else {
                     statuttext = [
                         `・Families`,
-                        `・<:FamiliesLogo1:1226940586733338676>`,
-                        `・Families <:FamiliesLogo1:1226940586733338676>`,
+                        `・👀`,
+                        `・Families `,
                         `・Families`,
-                        `・<:FamiliesLogo1:1226940586733338676>`
+                        `・👀`
                     ];
                 }
                 const randomText = statuttext[Math.floor(Math.random() * statuttext.length)];
