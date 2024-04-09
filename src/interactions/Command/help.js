@@ -29,6 +29,24 @@ module.exports = {
                             emoji: "💻",
                             value: "commands-Bothelp",
                         },
+                        {
+                            label: `Invite`,
+                            description: `Invite Bot to your server`,
+                            emoji: "📨",
+                            value: "invite-Bothelp",
+                        },
+                        {
+                            label: `Support server`,
+                            description: `Join the suppport server`,
+                            emoji: "❓",
+                            value: "support-Bothelp",
+                        },
+                        {
+                            label: `Changelogs`,
+                            description: `Show the bot changelogs`,
+                            emoji: "📃",
+                            value: "changelogs-Bothelp",
+                        },
                     ]),
             );
 
@@ -47,7 +65,7 @@ module.exports = {
                 },
                 {
                     name: `🔗┆Links`,
-                    value: ` [Invite Faky's Music](${https://discord.com/oauth2/authorize?client_id=1213700667374571620&permissions=2150743120&scope=bot})`
+                    value: `[Invite Faky's Music](https://discord.com/oauth2/authorize?client_id=1213700667374571620&permissions=2150743120&scope=bot) `
                 },
             ],
             components: [row],
