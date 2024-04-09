@@ -36,16 +36,18 @@ module.exports = async (client) => {
                 if (process.env.DISCORD_STATUS) {
                     statuttext = process.env.DISCORD_STATUS.split(', ');
                 } else {
-      statuttext = [
-        `・Families`,
-        `・┆${totalGuilds} servers`,
-        `・Families`,
-        `・┆Version ${require(`${process.cwd()}/package.json`).version}`
-      ];
-    }
-    const randomText = statuttext[Math.floor(Math.random() * statuttext.length)];
-    client.user.setPresence({ activities: [{ name: randomText, type: Discord.ActivityType.Watching }], status: 'dnd' });
-  }, 50000)
+                    statuttext = [
+                        `・❓┆/help`,
+                        `・💻┆${totalGuilds} servers`,
+                        `・📨┆discord.gg/corwindev`,
+                        `・🎉┆400+ commands`,
+                        `・🏷️┆Version ${require(`${process.cwd()}/package.json`).version}`
+                    ];
+                }
+                const randomText = statuttext[Math.floor(Math.random() * statuttext.length)];
+                client.user.setPresence({ activities: [{ name: randomText, type: Discord.ActivityType.Playing }], status: 'online' });
+            })
+    }, 50000)
 
-  client.player.init(client.user.id);
+    client.player.init(client.user.id);
 }
