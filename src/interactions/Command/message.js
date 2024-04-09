@@ -63,10 +63,6 @@ module.exports = {
                                     name: `❓┆What can I do here?`,
                                     value: `- Read the latest bot news\n- Test bot commands\n- Ask questions\n- Get help with setting up the bot in your server`,
                                 },
-                                {
-                                    name: `🔗┆Other servers from us`,
-                                    value: `[Tech server](https://discord.gg/bEJhVa6Ttv) - Get help with code, tech and crypto while you read the latest news\n[Ban Appeal](https://discord.gg/htf9pHNRxA) - Got banned? Request an unban`,
-                                },
                             ],
                             footer: {
                                 text: `© FAKY - 2024`,
@@ -236,10 +232,6 @@ module.exports = {
                                     value: `This is a server that mainly focused on everything that revolves around tech. For example, think of encryption, crypt or all new gadgets. Meet new people or learn more about tech yourself!. You can join this server by clicking [this](https://discord.gg/bEJhVa6Ttv) link`,
                                 },
                                 {
-                                    name: `🤖┇Bot Support`,
-                                    value: `This is the server you are currently on. All information about this server can be found in. You can get the link from this server to click on [this](https://discord.gg/GqhD6RNbzs) link`,
-                                },
-                                {
                                     name: `🔨┇TechPoint Ban Appeal`,
                                     value: `This server is for the people who are banned from a server or from the bots. You can create a ticket here to request an unban and to participate in the servers again or to be able to use the bots again. You can join this server by clicking [this](https://discord.gg/q9jZrDk9n6) link`,
                                 },
@@ -264,23 +256,12 @@ module.exports = {
                                 iconURL: "https://media.discordapp.net/attachments/937337957419999272/937797574440681472/techpoint_logo-min.jpg?width=812&height=812"
                             },
                             thumbnail: "https://media.discordapp.net/attachments/937337957419999272/937463192265846784/techpoint_logo_Bot.jpg?width=812&height=812",
-                            desc: `Outside of a community we also maintain 2 public bots. These bots are all made to make your server better!`,
+                            desc: `these is privet bot make for the families`,
                             fields: [
+
                                 {
-                                    name: `🤖┆What is Bot?`,
-                                    value: `Bot is a bot with which you can run your entire server! With no less than 400+ commands, we have a large bot with many options to improve your server and the best part is that it is completely in slash commands! You know what else is beautiful? All of this is **FREE** to use!`,
-                                },
-                                {
-                                    name: `🎶┆What is Bot 2?`,
-                                    value: `Bot 2 was created for additional music. This way you never get in each other's way when someone is already listening to music. Furthermore, this bot contains a soundboard and a radio system and the best part is that it is completely in slash commands!`,
-                                },
-                                {
-                                    name: `📨┆How do I invite the bots?`,
-                                    value: `You can invite the bots by doing \`/invite\` or by clicking on the links below\n\n**Bot Invite** - [Invite Here](https://discord.com/oauth2/authorize?&client_id=798144456528363550&scope=applications.commands+bot&permissions=8)\n**Bot 2 Invite** - [Invite Here](${client.config.discord.botInvite})`,
-                                },
-                                {
-                                    name: `🎫┆How do I get help when needed?`,
-                                    value: `You can ask your questions in the general chat or for further information you can take a look in <#897213893624102965>.`,
+                                    name: `Add Music Bot`,
+                                    value: `[Invite Faky's Music](https://discord.com/oauth2/authorize?client_id=1213700667374571620&permissions=2150743120&scope=bot)`,
                                 },
                             ],
                             footer: {
