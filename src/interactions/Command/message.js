@@ -64,16 +64,12 @@ module.exports = {
                                     value: `- Read the latest bot news\n- Test bot commands\n- Ask questions\n- Get help with setting up the bot in your server`,
                                 },
                                 {
-                                    name: `🤖┆What are Bot & Bot 2?`,
-                                    value: `You can find this information in the <#897221483460444170> channel.`,
-                                },
-                                {
                                     name: `🔗┆Other servers from us`,
                                     value: `[Tech server](https://discord.gg/bEJhVa6Ttv) - Get help with code, tech and crypto while you read the latest news\n[Ban Appeal](https://discord.gg/htf9pHNRxA) - Got banned? Request an unban`,
                                 },
                             ],
                             footer: {
-                                text: `© TechPoint - 2022`,
+                                text: `© FAKY - 2024`,
                                 iconURL: "https://media.discordapp.net/attachments/937337957419999272/937797574440681472/techpoint_logo-min.jpg?width=812&height=812"
                             }
                         }, interaction.channel)
@@ -134,7 +130,7 @@ module.exports = {
                                 }
                             ],
                             footer: {
-                                text: `© TechPoint - 2022`,
+                                text: `© FAKY - 2024`,
                                 iconURL: "https://media.discordapp.net/attachments/937337957419999272/937797574440681472/techpoint_logo-min.jpg?width=812&height=812"
                             }
                         }, interaction.channel)
@@ -180,7 +176,7 @@ module.exports = {
                                 }
                             ],
                             footer: {
-                                text: `© TechPoint - 2022`,
+                                text: `© FAKY - 2024`,
                                 iconURL: "https://media.discordapp.net/attachments/937337957419999272/937797574440681472/techpoint_logo-min.jpg?width=812&height=812"
                             }
                         }, interaction.channel)
@@ -249,7 +245,7 @@ module.exports = {
                                 },
                             ],
                             footer: {
-                                text: `© TechPoint - 2022`,
+                                text: `© FAKY - 2024`,
                                 iconURL: "https://media.discordapp.net/attachments/937337957419999272/937797574440681472/techpoint_logo-min.jpg?width=812&height=812"
                             }
                         }, interaction.channel)
@@ -288,7 +284,7 @@ module.exports = {
                                 },
                             ],
                             footer: {
-                                text: `© TechPoint - 2022`,
+                                text: `© FAKY - 2024`,
                                 iconURL: "https://media.discordapp.net/attachments/937337957419999272/937797574440681472/techpoint_logo-min.jpg?width=812&height=812"
                             }
                         }, interaction.channel)
@@ -407,7 +403,7 @@ module.exports = {
                                 }
                             ],
                             footer: {
-                                text: `© TechPoint - 2022`,
+                                text: `© FAKY - 2024`,
                                 iconURL: "https://media.discordapp.net/attachments/937337957419999272/937797574440681472/techpoint_logo-min.jpg?width=812&height=812"
                             }
                         }, interaction.channel)
@@ -449,7 +445,7 @@ module.exports = {
                                 }
                             ],
                             footer: {
-                                text: `© TechPoint - 2022`,
+                                text: `© FAKY - 2024`,
                                 iconURL: "https://media.discordapp.net/attachments/937337957419999272/937797574440681472/techpoint_logo-min.jpg?width=812&height=812"
                             }
                         }, interaction.channel)
