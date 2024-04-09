@@ -209,15 +209,6 @@ module.exports = async (client) => {
                             .setEmoji('➡️')
                             .setStyle(Discord.ButtonStyle.Secondary),
 
-                        new Discord.ButtonBuilder()
-                            .setLabel("Invite")
-                            .setURL(client.config.discord.botInvite)
-                            .setStyle(Discord.ButtonStyle.Link),
-
-                        new Discord.ButtonBuilder()
-                            .setLabel("Support server")
-                            .setURL(client.config.discord.serverInvite)
-                            .setStyle(Discord.ButtonStyle.Link),
                     );
 
                 const row2 = new Discord.ActionRowBuilder()
