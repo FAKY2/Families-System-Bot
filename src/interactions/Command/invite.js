@@ -18,7 +18,7 @@ module.exports = {
 
         client.embed({
             title: `📨・Invite`,
-            desc: `Sorry, these bots are private and specifically made for families.`,
+            desc: `❌ Sorry, This Robot Is special And Designed Specifically For The Families.`,
             image: "https://cdn.discordapp.com/attachments/843487478881976381/874694194474668052/Bot_banner_invite.jpg",
             type: 'editreply'
         }, interaction)
