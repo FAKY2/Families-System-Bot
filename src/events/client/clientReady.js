@@ -40,7 +40,7 @@ module.exports = async (client) => {
                         `Families`,
                         `👀`,
                         `Families `,
-                        `Families`,
+                        `eid mubarak 🌙`,
                         `👀`
                     ];
                 }
