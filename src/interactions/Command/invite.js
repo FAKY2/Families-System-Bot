@@ -15,28 +15,12 @@ module.exports = {
 
     run: async (client, interaction, args) => {
         await interaction.deferReply({ fetchReply: true });
-        let row = new Discord.ActionRowBuilder()
-            .addComponents(
-                new Discord.ButtonBuilder()
-                    .setLabel("Invite")
-                    .setURL(client.config.discord.botInvite)
-                    .setStyle(Discord.ButtonStyle.Link),
-
-                new Discord.ButtonBuilder()
-                    .setLabel("Support server")
-                    .setURL(client.config.discord.serverInvite)
-                    .setStyle(Discord.ButtonStyle.Link),
-            );
 
         client.embed({
             title: `📨・Invite`,
-            desc: `Make your server even better with Bot!`,
+            desc: `Sorry, these bots are private and specifically made for families.`,
             image: "https://cdn.discordapp.com/attachments/843487478881976381/874694194474668052/Bot_banner_invite.jpg",
-            url: client.config.discord.botInvite,
-            components: [row],
             type: 'editreply'
         }, interaction)
     },
 };
-
- 
