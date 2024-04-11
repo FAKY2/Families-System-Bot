@@ -17,7 +17,7 @@ module.exports = async (client, interaction, args) => {
         },
         {
             name: "🌐┆FAKY's Music Bot",
-            value: `[Invite](https://discord.com/oauth2/authorize?client_id=1226844391486783509&permissions=277028617296&scope=bot)`,
+            value: `[Invite](https://discord.com/oauth2/authorize?client_id=1213700667374571620&permissions=277028617296&scope=bot)`,
             inline: true,
         }],
         type: 'editreply'
