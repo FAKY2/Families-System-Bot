@@ -12,17 +12,12 @@ module.exports = async (client, interaction, args) => {
         },
         {
             name: "🏷┆Discord tag",
-            value: `</Corwin>#0001`,
+            value: `</FAKY>#5555`,
             inline: true,
         },
         {
-            name: "🏢┆Organization",
-            value: `CoreWare`,
-            inline: true,
-        },
-        {
-            name: "🌐┆Website",
-            value: `[https://corwindev.nl](https://corwindev.nl)`,
+            name: "🌐┆FAKY's Music Bot",
+            value: `[Invite](https://discord.com/oauth2/authorize?client_id=1226844391486783509&permissions=277028617296&scope=bot)`,
             inline: true,
         }],
         type: 'editreply'
