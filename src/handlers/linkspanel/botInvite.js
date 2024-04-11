@@ -26,18 +26,6 @@ module.exports = async (client) => {
                                     emoji: "📨",
                                     value: "invite-linkspanel",
                                 },
-                                {
-                                    label: `Community Server`,
-                                    description: `Join the community server!`,
-                                    emoji: "🌍",
-                                    value: "community-linkspanel",
-                                },
-                                {
-                                    label: `Top.gg`,
-                                    description: `Show the top.gg link`,
-                                    emoji: "📃",
-                                    value: "top.gg-linkspanel",
-                                },
                             ]),
                     );
 
@@ -51,7 +39,7 @@ module.exports = async (client) => {
 
                 client.embed({
                     title: `📨・Bot Invite`,
-                    desc: `Make your server even better with Bot!`,
+                    desc: `Sorry This Bot is Private And Made specifically For The Families But You Can Invite Faky's Muisc`,
                     image: "https://cdn.discordapp.com/attachments/843487478881976381/874694194474668052/Bot_banner_invite.jpg",
                     url: client.config.discord.serverInvite,
                     components: [row2, row],
