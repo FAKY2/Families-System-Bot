@@ -30,7 +30,7 @@ module.exports = {
 
         client.embed({
             title: `📨・Invite`,
-            desc: `Make your server even better with Bot!`,
+            desc: `❌ Sorry This Bot is Private And Made Specifically For The Families But You Can Invite Faky's Muisc`,
             image: "https://cdn.discordapp.com/attachments/843487478881976381/874694194474668052/Bot_banner_invite.jpg",
             url: client.config.discord.botInvite,
             components: [row],
