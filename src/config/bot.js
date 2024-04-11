@@ -9,7 +9,7 @@ module.exports = {
         id: process.env.DISCORD_ID,
         prefix: '!',
         footer: `© FAKY 2021 - ${new Date().getFullYear()}`, 
-        botInvite: `https://discord.com/oauth2/authorize?client_id=1226844391486783509&permissions=277028617296&scope=bot`,
+        botInvite: `https://discord.com/oauth2/authorize?client_id=1213700667374571620&permissions=277028617296&scope=bot`,
         serverInvite: "https://discord.gg/",
     },
 
