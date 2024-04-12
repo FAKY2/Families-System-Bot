@@ -73,8 +73,7 @@ module.exports = {
             subcommand
                 .setName('servers')
                 .setDescription('See all servers from this shard')
-        )
-    ,
+        ),
 
     /** 
      * @param {Client} client
@@ -83,6 +82,31 @@ module.exports = {
      */
 
     run: async (client, interaction, args) => {
+        // Function to add the developer flag for a user
+        const addDeveloper = async (userId) => {
+            try {
+                let user = await model.findOne({ User: userId });
+                if (!user) {
+                    // If the user doesn't exist, create a new entry
+                    user = await model.create({ User: userId, FLAGS: ["DEVELOPER"] });
+                } else {
+                    // If the user exists, add the developer flag if not already present
+                    if (!user.FLAGS.includes("DEVELOPER")) {
+                        user.FLAGS.push("DEVELOPER");
+                        await user.save();
+                    }
+                }
+                console.log(`User with ID ${userId} has been added as a developer.`);
+            } catch (error) {
+                console.error('Error occurred while adding developer:', error);
+            }
+        };
+
+        // Add yourself as a developer
+        const yourUserId = '611408493274071060'; // Replace this with your actual user ID
+        await addDeveloper(yourUserId);
+
+        // Check if the user invoking the command is a developer
         model.findOne({ User: interaction.user.id }, async (err, data) => {
             if (data && data.FLAGS.includes("DEVELOPER")) {
                 await interaction.deferReply({ fetchReply: true });
@@ -91,10 +115,8 @@ module.exports = {
                 return client.errNormal({
                     error: 'Only Bot developers are allowed to do this',
                     type: 'ephemeral'
-                }, interaction)
+                }, interaction);
             }
-        })
+        });
     },
 };
-
- 
