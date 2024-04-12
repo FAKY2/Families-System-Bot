@@ -73,7 +73,7 @@ module.exports = async (client, guild) => {
             },
             {
                 name: "☎️┆I need help what now?",
-                value: `You can DM <@755297485328482356> for support or joining the [[Support server]](${client.config.discord.serverInvite})`,
+                value: `You can DM <@611408493274071060> for support or joining the [[Support server]](${client.config.discord.serverInvite})`,
                 inline: false,
             },
             {
@@ -83,7 +83,7 @@ module.exports = async (client, guild) => {
             },
             {
                 name: "📨┆Invite the bot!",
-                value: `Invite the bot to click [[HERE]](${client.config.discord.botInvite})`,
+                value: `❌ Sorry This Bot is Private And Made Specifically For The Families But You Can Invite Faky's Music [[HERE]](${client.config.discord.botInvite})`,
                 inline: false,
             },
             ],
