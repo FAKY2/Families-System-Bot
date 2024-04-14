@@ -247,7 +247,8 @@ module.exports = async (client, interaction, args) => {
                 fields: [
                     {
                         name: `📘┆What is Bot?`,
-                        value: `Bot is a bot with which you can run your entire server! With no less than 400+ commands, we have a large bot with many options to improve your server! You know what else is beautiful? All of this is **FREE** to use!`,
+                        value: `nlike generic bots, ours is tailored specifically for the Family interactions. From managing schedules to creating memorable moments,Your privacy matters. Our family bot is private and secure, ensuring that your personal information and cherished moments remain within the family circle, 
+                                 Every feature and function has been carefully crafted with families in mind. Whether it's organizing tasks, sharing memories, or simply bringing joy, this bot is here to serve `,
                     },
                     {
                         name: `🎶┆What is Bot 2?`,
