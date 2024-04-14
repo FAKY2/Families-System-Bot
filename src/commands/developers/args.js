@@ -27,7 +27,7 @@ module.exports = async (client, interaction, args) => {
                     },
                     {
                         name: `🎫┆How do I get help when needed?`,
-                        value: `You can make a ticket in <#820308164322656327>! We are happy to help you with your questions here and offer support in your server!`,
+                        value: `You can make a ticket in <#1227293345211089107>! We are happy to help you with your questions here and offer support in your server!`,
                     },
                     {
                         name: `⚙️┆I want to help Bot Hangout to improve!`,
@@ -222,7 +222,7 @@ module.exports = async (client, interaction, args) => {
             fields: [
                 {
                     name: `🏆┆Levels`,
-                    value: `- Level 5   | <@&833307296699908097>\n- Level 10  | <@&833307450437664838>\n- Level 15  | <@&833307452279226379>\n- Level 30 | <@&915290300757458964>\n- Level 40 | <@&915290324480430080>`,
+                    value: `- Level 5   | <@&1229147328758419597>\n- Level 10  | <@&1227527825217552464>\n- Level 15  | <@&1229147843416293527>\n- Level 30 | <@&1229147979991220315>\n- Level 40 | <@&1229148184563945642>`,
                 },
                 {
                     name: `🥳┆Special`,
@@ -230,7 +230,7 @@ module.exports = async (client, interaction, args) => {
                 },
                 {
                     name: `💰┆Economy`,
-                    value: `- $10.000 | <@&890720270086733854>\n- $15.000 | <@&833936202725720084>\n- $20.000 | <@&833936185167839232> \n- $25.000 | <@&928236333309255711> \n- $30.000 | <@&928235747100733450>`,
+                    value: `- $10.000 | <@&1229147328758419597>\n- $15.000 | <@&1227527825217552464>\n- $20.000 | <@&1229147843416293527> \n- $25.000 | <@&1229147979991220315> \n- $30.000 | <@&1229148184563945642>`,
                 }
             ]
         }, interaction.channel)
@@ -259,7 +259,7 @@ module.exports = async (client, interaction, args) => {
                     },
                     {
                         name: `🎫┆How do I get help when needed?`,
-                        value: `You can make a ticket in <#820308164322656327>! We are happy to help you with your questions here and offer support in your server!`,
+                        value: `You can make a ticket in <#1227293345211089107>! We are happy to help you with your questions here and offer support in your server!`,
                     }
                 ]
             }, interaction.channel)
