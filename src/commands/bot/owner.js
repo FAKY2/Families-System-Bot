@@ -7,12 +7,12 @@ module.exports = async (client, interaction, args) => {
         thumbnail: client.user.avatarURL({ dynamic: true, size: 1024 }),
         fields: [{
             name: "👑┆Owner name",
-            value: `Corwin`,
+            value: `FAKY`,
             inline: true,
         },
         {
             name: "🏷┆Discord tag",
-            value: `</FAKY>#5555`,
+            value: `<@611408493274071060>`,
             inline: true,
         },
         {
