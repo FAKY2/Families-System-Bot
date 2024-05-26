@@ -3,8 +3,8 @@ const Discord = require('discord.js');
 const Schema = require('../../database/models/userBans');
 
 const webhookClientLogs = new Discord.WebhookClient({
-  id: "",
-  token: "",
+  id: "1242744112709632021",
+  token: "obwnLE6wVLHod2CtlZCED85_4fmUUR4HtP_tih2aZRKqic8paYJgDAf14dVPpVdMWpQ8",
 });
 
 module.exports = async (client, interaction, args) => {
