@@ -260,7 +260,7 @@ module.exports = async (client, interaction, args) => {
                     },
                     {
                         name: `🎫┆How do I get help when needed?`,
-                        value: `You can make a ticket in <#1227293345211089107>! We are happy to help you with your questions here and offer support in your server!`,
+                        value: `You can make a ticket in <#1242734344993509427>! We are happy to help you with your questions here and offer support in your server!`,
                     }
                 ]
             }, interaction.channel)
