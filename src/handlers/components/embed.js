@@ -10,7 +10,7 @@ const Schema = require("../../database/models/functions");
 
 module.exports = (client) => {
     client.templateEmbed = function () {
-        return new Discord.MessageEmbed() // Change here
+        return new Discord.EmbedBuilder()
             .setAuthor({
                 name: client.user.username,
                 iconURL: client.user.avatarURL({ size: 1024 })
@@ -229,11 +229,93 @@ module.exports = (client) => {
     }, interaction) {
         const functiondata = await Schema.findOne({ Guild: interaction.guild.id })
 
-        let embed = new Discord.MessageEmbed() // Change here
+        let embed = new Discord.EmbedBuilder()
             .setColor(client.config.colors.normal)
 
         if (title) embed.setTitle(title);
         if (desc && desc.length >= 2048) embed.setDescription(desc.substr(0, 2044) + "...");
         else if (desc) embed.setDescription(desc);
         if (image) embed.setImage(image);
-       
+        if (thumbnail) embed.setThumbnail(thumbnail);
+        if (fields) embed.addFields(fields);
+        if (author) embed.setAuthor(author[0], author[1]);
+        if (url) embed.setURL(url);
+        if (color) embed.setColor(color);
+        if (functiondata && functiondata.Color && !color) embed.setColor(functiondata.Color)
+
+        return client.sendEmbed({
+            embeds: [embed],
+            content: content,
+            components: components,
+            type: type
+        }, interaction)
+    }
+
+    client.sendEmbed = async function ({
+        embeds: embeds,
+        content: content,
+        components: components,
+        type: type
+    }, interaction) {
+        if (type && type.toLowerCase() == "edit") {
+            return await interaction.edit({
+                embeds: embeds,
+                content: content,
+                components: components,
+                fetchReply: true
+            }).catch(e => { });
+        }
+        else if (type && type.toLowerCase() == "editreply") {
+            return await interaction.editReply({
+                embeds: embeds,
+                content: content,
+                components: components,
+                fetchReply: true
+            }).catch(e => { });
+        }
+        else if (type && type.toLowerCase() == "reply") {
+            return await interaction.reply({
+                embeds: embeds,
+                content: content,
+                components: components,
+                fetchReply: true
+            }).catch(e => { });
+        }
+        else if (type && type.toLowerCase() == "update") {
+            return await interaction.update({
+                embeds: embeds,
+                content: content,
+                components: components,
+                fetchReply: true
+            }).catch(e => { });
+        }
+        else if (type && type.toLowerCase() == "ephemeraledit") {
+            return await interaction.editReply({
+                embeds: embeds,
+                content: content,
+                components: components,
+                fetchReply: true,
+                ephemeral: true
+            }).catch(e => { });
+        }
+        else if (type && type.toLowerCase() == "ephemeral") {
+            return await interaction.reply({
+                embeds: embeds,
+                content: content,
+                components: components,
+                fetchReply: true,
+                ephemeral: true
+            }).catch(e => { });
+        }
+        else {
+            return await interaction.send({
+                embeds: embeds,
+                content: content,
+                components: components,
+                fetchReply: true
+            }).catch(e => { });
+        }
+    }
+}
+
+ 
