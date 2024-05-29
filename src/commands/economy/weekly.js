@@ -6,7 +6,7 @@ const Schema2 = require("../../database/models/economyTimeout");
 module.exports = async (client, interaction, args) => {
   let user = interaction.user;
   let timeout = 604800000;
-  let amount = 500;
+  let amount = 9200;
 
   Schema2.findOne({ Guild: interaction.guild.id, User: user.id }, async (err, dataTime) => {
     if (dataTime && dataTime.Weekly !== null && timeout - (Date.now() - dataTime.Weekly) > 0) {
