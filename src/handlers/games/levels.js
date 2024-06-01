@@ -1,5 +1,4 @@
 const discord = require('discord.js');
-
 const levels = require("../../database/models/levels");
 
 module.exports = async (client) => {
@@ -8,10 +7,10 @@ module.exports = async (client) => {
         if (!user) return false;
 
         user.xp = xp;
-        user.level = Math.floor(0.1 * Math.sqrt(user.xp));
+        user.level = Math.floor(0.05 * Math.sqrt(user.xp)); // Easing the level up requirement
         user.lastUpdated = new Date();
 
-        user.save();
+        await user.save();
 
         return user;
     }
@@ -21,10 +20,10 @@ module.exports = async (client) => {
         if (!user) return false;
 
         user.level = level;
-        user.xp = level * level * 100;
+        user.xp = client.xpFor(level);
         user.lastUpdated = new Date();
 
-        user.save();
+        await user.save();
 
         return user;
     }
@@ -37,19 +36,20 @@ module.exports = async (client) => {
                 userID: userId,
                 guildID: guildId,
                 xp: xp,
-                level: Math.floor(0.1 * Math.sqrt(xp))
-            }).save();
+                level: Math.floor(0.05 * Math.sqrt(xp)) // Easing the level up requirement
+            });
+            await newUser.save();
 
-            return (Math.floor(0.1 * Math.sqrt(xp)) > 0);
+            return (Math.floor(0.05 * Math.sqrt(xp)) > 0);
         }
 
         user.xp += parseInt(xp, 10);
-        user.level = Math.floor(0.1 * Math.sqrt(user.xp));
+        user.level = Math.floor(0.05 * Math.sqrt(user.xp)); // Easing the level up requirement
         user.lastUpdated = new Date();
 
         await user.save();
 
-        return (Math.floor(0.1 * Math.sqrt(user.xp -= xp)) < user.level);
+        return (Math.floor(0.05 * Math.sqrt(user.xp - xp)) < user.level); // Fixed: subtract xp before calculating previous level
     }
 
     client.addLevel = async function (userId, guildId, level) {
@@ -57,26 +57,20 @@ module.exports = async (client) => {
         if (!user) return false;
 
         user.level += parseInt(level, 10);
-        user.xp = user.level * user.level * 100;
+        user.xp = client.xpFor(user.level);
         user.lastUpdated = new Date();
 
-        user.save();
+        await user.save();
 
         return user;
     }
 
     client.fetchLevels = async function (userId, guildId, fetchPosition = true) {
-        const user = await levels.findOne({
-            userID: userId,
-            guildID: guildId
-        });
+        const user = await levels.findOne({ userID: userId, guildID: guildId });
         if (!user) return false;
 
         if (fetchPosition === true) {
-            const leaderboard = await levels.find({
-                guildID: guildId
-            }).sort([['xp', 'descending']]).exec();
-
+            const leaderboard = await levels.find({ guildID: guildId }).sort([['xp', 'descending']]).exec();
             user.position = leaderboard.findIndex(i => i.userID === userId) + 1;
         }
 
@@ -87,6 +81,6 @@ module.exports = async (client) => {
     }
 
     client.xpFor = function (targetLevel) {
-        return targetLevel * targetLevel * 100;
+        return targetLevel * targetLevel * 50; // Less XP required per level
     }
 }
